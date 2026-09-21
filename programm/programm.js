@@ -2,24 +2,29 @@ const PROGRAM_PDF_URL = null;
 
 const programImages = {
   hero: {
-    src: null,
-    alt: "",
+    src: "/programm/bilder/getu-portrait-allee.jpg",
+    alt: "Getu Abraham lächelt auf einer von Bäumen gesäumten Straße in Leipzig.",
+    objectPosition: "center 38%",
+    loading: "eager",
     placeholderLabel: "Bild: Getu Abraham in Leipzig",
     note: "Portrait / Stadtmotiv"
   },
   science: {
-    src: null,
-    alt: "",
+    src: "/programm/bilder/getu-labor.jpg",
+    alt: "Getu Abraham in einem Labor der Universität Leipzig.",
+    objectPosition: "center center",
     placeholderLabel: "Bild: Leipzig / Wissenschaft / Wirtschaft"
   },
   publicSpace: {
-    src: null,
-    alt: "",
+    src: "/programm/bilder/getu-im-gespraech.jpg",
+    alt: "Getu Abraham im Gespräch auf einer Leipziger Straße.",
+    objectPosition: "center 42%",
     placeholderLabel: "Leipziger Stadtteil / öffentlicher Raum"
   },
   neighborhoods: {
-    src: null,
-    alt: "",
+    src: "/programm/bilder/getu-beim-stadtteillauf.jpg",
+    alt: "Getu Abraham bei einer Sportveranstaltung mit vielen Teilnehmerinnen und Teilnehmern.",
+    objectPosition: "center 36%",
     placeholderLabel: "Getu im Gespräch / Stadtteil / Menschen"
   }
 };
@@ -306,10 +311,10 @@ function escapeHtml(value) {
   })[character]);
 }
 
-function renderProgramImage({ src = null, alt = "", placeholderLabel, note = "" }) {
+function renderProgramImage({ src = null, alt = "", objectPosition = "center", loading = "lazy", placeholderLabel, note = "" }) {
   if (src) {
     if (!alt) throw new Error("ProgramImage benötigt bei src einen alt-Text.");
-    return `<img class="program-image" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" />`;
+    return `<img class="program-image" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" style="object-position: ${escapeHtml(objectPosition)}" loading="${loading}" decoding="async" />`;
   }
   return `
     <div class="program-image-placeholder" role="img" aria-label="${escapeHtml(placeholderLabel)}">
