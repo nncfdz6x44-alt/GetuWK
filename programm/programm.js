@@ -1,5 +1,29 @@
 const PROGRAM_PDF_URL = null;
 
+const programImages = {
+  hero: {
+    src: null,
+    alt: "",
+    placeholderLabel: "Bild: Getu Abraham in Leipzig",
+    note: "Portrait / Stadtmotiv"
+  },
+  science: {
+    src: null,
+    alt: "",
+    placeholderLabel: "Bild: Leipzig / Wissenschaft / Wirtschaft"
+  },
+  publicSpace: {
+    src: null,
+    alt: "",
+    placeholderLabel: "Leipziger Stadtteil / öffentlicher Raum"
+  },
+  neighborhoods: {
+    src: null,
+    alt: "",
+    placeholderLabel: "Getu im Gespräch / Stadtteil / Menschen"
+  }
+};
+
 const programTopics = [
   {
     id: "wirtschaft",
@@ -321,10 +345,9 @@ function renderTopic(topic) {
 }
 
 document.querySelectorAll("[data-program-image]").forEach((slot) => {
-  slot.innerHTML = renderProgramImage({
-    placeholderLabel: slot.dataset.label,
-    note: slot.dataset.note || ""
-  });
+  const image = programImages[slot.dataset.imageKey];
+  if (!image) throw new Error(`Unbekannte ProgramImage-Konfiguration: ${slot.dataset.imageKey}`);
+  slot.innerHTML = renderProgramImage(image);
 });
 
 document.querySelector("[data-program-nav]").innerHTML = programTopics
@@ -346,13 +369,13 @@ programTopics.forEach((topic, index) => {
   if (index === 7) {
     topicMarkup.push(`
       <div class="topic-image-break">
-        ${renderProgramImage({ placeholderLabel: "Leipziger Stadtteil / öffentlicher Raum" })}
+        ${renderProgramImage(programImages.publicSpace)}
       </div>`);
   }
   if (index === 11) {
     topicMarkup.push(`
       <div class="topic-image-break topic-image-break-people">
-        ${renderProgramImage({ placeholderLabel: "Getu im Gespräch / Stadtteil / Menschen" })}
+        ${renderProgramImage(programImages.neighborhoods)}
       </div>`);
   }
   topicMarkup.push(renderTopic(topic));
