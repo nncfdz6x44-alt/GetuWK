@@ -14,6 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://sibforms.com" />
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -219,8 +221,8 @@
             <article class="support-card" id="newsletter">
               <p class="support-label">Newsletter</p>
               <h3>Über die Kampagne informiert bleiben</h3>
-              <p>Ein regelmäßiger Newsletter zu Terminen, Positionen und Neuigkeiten wird vorbereitet.</p>
-              <a class="button button-secondary" href="#kontakt">Newsletter vormerken</a>
+              <p>Erhalte Termine, Positionen und Neuigkeiten zur Kampagne direkt per E-Mail.</p>
+              <button class="button button-secondary" type="button" data-newsletter-open>Jetzt anmelden</button>
             </article>
             <article class="support-card">
               <p class="support-label">Unterstützen</p>
@@ -252,6 +254,116 @@
       </footer>
     </div>
 
+    <dialog class="newsletter-dialog" id="newsletter-dialog" aria-labelledby="newsletter-dialog-title">
+      <div class="newsletter-dialog__surface">
+        <button class="newsletter-dialog__close" type="button" data-newsletter-close aria-label="Newsletter-Anmeldung schließen">×</button>
+
+        <div class="newsletter-dialog__intro">
+          <p class="eyebrow">Newsletter</p>
+          <h2 id="newsletter-dialog-title">Leipzig bewegen.</h2>
+          <p>Erhalte Termine, Positionen und Einblicke in die Kampagne direkt in dein Postfach.</p>
+        </div>
+
+        <div class="newsletter-form-panel">
+          <div class="sib-form newsletter-form">
+            <div id="sib-form-container" class="sib-form-container">
+              <div id="error-message" class="sib-form-message-panel newsletter-message newsletter-message--error" role="alert" aria-live="assertive">
+                <div class="sib-form-message-panel__text">
+                  <span class="sib-form-message-panel__inner-text">Deine Anmeldung konnte nicht gespeichert werden. Bitte versuche es erneut.</span>
+                </div>
+              </div>
+
+              <div id="success-message" class="sib-form-message-panel newsletter-message newsletter-message--success" role="status" aria-live="polite">
+                <div class="sib-form-message-panel__text">
+                  <span class="sib-form-message-panel__inner-text">Deine Anmeldung war erfolgreich.</span>
+                </div>
+              </div>
+
+              <div id="sib-container" class="sib-container--large sib-container--vertical newsletter-form-container">
+                <form
+                  id="sib-form"
+                  method="POST"
+                  action="https://3f250493.sibforms.com/serve/MUIFACxIkrgdlpDvpAYEkIfK-s3CFfs-sjIG9PxrwMfH0e1jUGSYgkzq8J-vncvKeWWozQQT7BwBl7emPyJqxTmNYPheaKC5QZCqRW7dfdwiP9QSzypnfq0Ju-pkPAZ5Qn8hNeDZ7jAh1BFwGlTqJvc2rhiKShiLyOYUtAANzFFkbewXvhjlRzjb0zJz4ppLzmeGZQiWmdtXbh-yrQ=="
+                  data-type="subscription"
+                >
+                  <p class="newsletter-form-copy">Trage deine Daten ein und bleibe mit #TeamGetu auf dem Laufenden.</p>
+
+                  <div class="newsletter-fields">
+                    <div class="sib-input sib-form-block newsletter-field">
+                      <div class="form__entry entry_block">
+                        <div class="form__label-row">
+                          <label class="entry__label" for="VORNAME" data-required="*">Vorname</label>
+                          <div class="entry__field">
+                            <input class="input" maxlength="200" type="text" id="VORNAME" name="VORNAME" autocomplete="given-name" placeholder="Dein Vorname" data-required="true" required />
+                          </div>
+                        </div>
+                        <label class="entry__error entry__error--primary"></label>
+                      </div>
+                    </div>
+
+                    <div class="sib-input sib-form-block newsletter-field">
+                      <div class="form__entry entry_block">
+                        <div class="form__label-row">
+                          <label class="entry__label" for="NACHNAME" data-required="*">Nachname</label>
+                          <div class="entry__field">
+                            <input class="input" maxlength="200" type="text" id="NACHNAME" name="NACHNAME" autocomplete="family-name" placeholder="Dein Nachname" data-required="true" required />
+                          </div>
+                        </div>
+                        <label class="entry__error entry__error--primary"></label>
+                      </div>
+                    </div>
+
+                    <div class="sib-input sib-form-block newsletter-field">
+                      <div class="form__entry entry_block">
+                        <div class="form__label-row">
+                          <label class="entry__label" for="EMAIL" data-required="*">E-Mail-Adresse</label>
+                          <div class="entry__field">
+                            <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="name@beispiel.de" data-required="true" required />
+                          </div>
+                        </div>
+                        <label class="entry__error entry__error--primary"></label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="button newsletter-submit sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                    <svg class="progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" aria-hidden="true">
+                      <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                    </svg>
+                    Newsletter abonnieren
+                  </button>
+
+                  <p class="newsletter-privacy">Deine Angaben werden zur Newsletter-Anmeldung sicher an Brevo übermittelt. Du kannst dich jederzeit wieder abmelden.</p>
+                  <input type="text" name="email_address_check" value="" class="input--hidden" tabindex="-1" autocomplete="off" />
+                  <input type="hidden" name="locale" value="de" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = "Wähle bitte eine Ländervorwahl aus.";
+      window.LOCALE = "de";
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
+      window.REQUIRED_ERROR_MESSAGE = "Dieses Feld darf nicht leer sein.";
+      window.GENERIC_INVALID_MESSAGE = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
+      window.INVALID_NUMBER = "Die eingegebenen Informationen sind nicht gültig. Bitte überprüfe das Feldformat und versuche es erneut.";
+      window.INVALID_DATE = "Bitte gib ein gültiges Datum ein.";
+      window.REQUIRED_MULTISELECT_MESSAGE = "Wähle bitte mindestens eine Option aus.";
+      window.translation = {
+        common: {
+          selectedList: "{quantity} Liste ausgewählt",
+          selectedLists: "{quantity} Listen ausgewählt",
+          selectedOption: "{quantity} ausgewählt",
+          selectedOptions: "{quantity} ausgewählt"
+        }
+      };
+      window.AUTOHIDE = false;
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
     <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
     <script src="./script.js"></script>
   </body>
