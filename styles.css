@@ -569,8 +569,12 @@ h2 {
 .cta {
   display: grid;
   gap: 1.4rem;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1fr;
   align-items: start;
+}
+
+.cta-copy {
+  max-width: 54rem;
 }
 
 .support-grid {
