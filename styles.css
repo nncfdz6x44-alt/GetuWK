@@ -1092,3 +1092,22 @@ h2 {
     animation: none;
   }
 }
+
+
+#sib-container.newsletter-form-container .newsletter-field input {
+  width: 100%;
+  min-height: 3.35rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(23, 35, 30, 0.16);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  font: inherit;
+}
+
+#sib-container.newsletter-form-container .newsletter-field input:focus {
+  border-color: var(--accent);
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(216, 92, 61, 0.13);
+}
