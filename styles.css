@@ -626,6 +626,29 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.footer-donations {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.footer-donations .eyebrow {
+  margin-bottom: 0.8rem;
+}
+
+.footer-donations p {
+  margin-bottom: 0.35rem;
+}
+
+.footer-bank-code {
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+.footer-purpose {
+  margin-top: 0.9rem;
+}
+
 .legal-page {
   margin: 3rem 0 5rem;
 }
