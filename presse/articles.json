@@ -1,0 +1,218 @@
+{
+  "contactEmail": "kontakt@getu-abraham.de",
+  "articles": [
+    {
+      "id": "press-01",
+      "title": "Getu Abraham ist unabhängiger Kandidat bei Leipziger OB-Wahl",
+      "medium": "MDR",
+      "date": "2026-09-26",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.mdr.de/nachrichten/sachsen/leipzig/leipzig-leipzig-land/news-getu-abraham-unabhaengiger-kandidat%2Coberbuergermeister-wahl-118.html",
+      "description": "MDR berichtet über die offizielle Bekanntgabe der parteiunabhängigen Kandidatur.",
+      "category": "obm-wahl",
+      "featured": "primary"
+    },
+    {
+      "id": "press-02",
+      "title": "OBM-Wahl 2027 in Leipzig: Getu Abraham will als parteiloser Kandidat antreten + Video",
+      "medium": "Leipziger Zeitung",
+      "date": "2026-09-25",
+      "types": [
+        "Artikel",
+        "Video"
+      ],
+      "url": "https://www.l-iz.de/politik/leipzig/2026/09/obm-wahl-2027-in-leipzig-getu-abraham-will-als-parteiloser-kandidat-antreten-video-671566",
+      "description": "Bericht mit Video über die offizielle Vorstellung der Kandidatur im Leipziger Laufladen.",
+      "category": "obm-wahl",
+      "featured": "secondary"
+    },
+    {
+      "id": "press-03",
+      "title": "OBM-Kandidatur: Getu Abraham verlässt CDU-Fraktion im Leipziger Stadtrat",
+      "medium": "LVZ",
+      "date": "2026-09-22",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.lvz.de/lokales/leipzig/obm-kandidatur-getu-abraham-verlaesst-cdu-fraktion-im-leipziger-stadtrat-JQI6VMOUQZEFBBXBBKQGM4K4ZA.html",
+      "description": "Bericht über das Ende der Zusammenarbeit mit der CDU-Fraktion im Zuge der unabhängigen OBM-Kandidatur.",
+      "category": "obm-wahl",
+      "featured": null
+    },
+    {
+      "id": "press-04",
+      "title": "Leipziger Stadtrat Abraham will als unabhängiger OBM-Kandidat antreten",
+      "medium": "LVZ",
+      "date": "2026-09-21",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.lvz.de/lokales/leipzig/getu-abraham-will-in-leipzig-als-obm-kandidat-antreten-3VKJNPM6RFACZOL72RHHVECUDU.html",
+      "description": "Die LVZ berichtet über die angekündigte unabhängige Kandidatur für das Leipziger Oberbürgermeisteramt.",
+      "category": "obm-wahl",
+      "featured": null
+    },
+    {
+      "id": "press-05",
+      "title": "Darum will ER Leipziger Oberbürgermeister werden",
+      "medium": "Radio Leipzig",
+      "date": "2026-09-21",
+      "types": [
+        "Interview",
+        "Audio"
+      ],
+      "url": "https://www.radioleipzig.de/beitrag/darum-will-er-leipzigs-erster-afrikanischer-ob-werden-894201/",
+      "description": "Getu Abraham äußert sich zu seinen Zielen, zur wirtschaftlichen Entwicklung Leipzigs und zur Förderung von Start-ups.",
+      "category": "obm-wahl",
+      "featured": "secondary"
+    },
+    {
+      "id": "press-06",
+      "title": "„Loyalität gilt keinem Parteiprogramm“: Getu Abraham will Leipzigs Oberbürgermeister werden",
+      "medium": "TAG24",
+      "date": "2026-09-22",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.tag24.de/leipzig/buergermeisterwahl/loyalitaet-gilt-keinem-parteiprogramm-getu-abraham-will-leipzigs-oberbuergermeister-werden-3533976",
+      "description": "TAG24 berichtet über die parteiunabhängige Kandidatur und Abrahams Motivation für das Oberbürgermeisteramt.",
+      "category": "obm-wahl",
+      "featured": null
+    },
+    {
+      "id": "press-07",
+      "title": "Getu Abraham will als parteiunabhängiger OB ins Leipziger Rathaus",
+      "medium": "MDR Sachsenradio",
+      "date": "2026-09-21",
+      "types": [
+        "Audio"
+      ],
+      "url": "https://www.mdr.de/nachrichten/sachsen/leipzig/audio-unabhaengiger-kandidat-ob-leipzig-100.html",
+      "description": "Radiobeitrag zur angekündigten unabhängigen Kandidatur für das Leipziger Rathaus.",
+      "category": "obm-wahl",
+      "featured": null
+    },
+    {
+      "id": "press-08",
+      "title": "Wird er Leipzigs erster schwarzer Oberbürgermeister?",
+      "medium": "TAG24",
+      "date": "2026-03-31",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.tag24.de/leipzig/buergermeisterwahl/leipzig-erster-schwarzer-oberbuergermeister-buergerliches-buendnis-bringt-getu-abraham-ins-spiel-3485590",
+      "description": "Porträt über Getu Abraham und die Diskussion um eine mögliche Oberbürgermeister-Kandidatur.",
+      "category": "obm-wahl",
+      "featured": null,
+      "format": "Porträt"
+    },
+    {
+      "id": "press-09",
+      "title": "Zwei Neue für die OB-Wahl: Der eine will, der andere vielleicht",
+      "medium": "Radio Leipzig",
+      "date": "2026-03-31",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.radioleipzig.de/beitrag/zwei-neue-fuer-die-leipziger-ob-wahl-der-eine-will-der-andere-vielleicht-889172/",
+      "description": "Bericht über mögliche neue Kandidaten für die Leipziger Oberbürgermeisterwahl.",
+      "category": "obm-wahl",
+      "featured": null
+    },
+    {
+      "id": "press-10",
+      "title": "Kein Ponyhof",
+      "medium": "kreuzer",
+      "date": "2025-05-04",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://kreuzer-leipzig.de/2025/05/04/getu-abraham-leipzig-stadtrat-spd-cdu-rassismusvorwuerfe",
+      "description": "Porträt über Getu Abrahams Beruf, seine Stadtratsarbeit und seinen politischen Weg.",
+      "category": "politische-arbeit",
+      "featured": null,
+      "format": "Porträt"
+    },
+    {
+      "id": "press-11",
+      "title": "Ex-SPD-Stadtrat Getu Abraham geht zur CDU-Fraktion",
+      "medium": "LVZ",
+      "date": "2025-03-13",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.lvz.de/lokales/leipzig/leipzig-ex-spd-stadtrat-getu-abraham-wechselt-zur-cdu-fraktion-74NQJMCYFRCYPGKO7XAAOYRQ3E.html",
+      "description": "Die LVZ berichtet über den Wechsel des parteilosen Stadtrats in die CDU-Fraktion.",
+      "category": "politische-arbeit",
+      "featured": null
+    },
+    {
+      "id": "press-12",
+      "title": "Darum hat die Leipziger CDU-Fraktion jetzt auch einen äthiopischen Tierarzt",
+      "medium": "Antenne Sachsen",
+      "date": "2025-03-13",
+      "types": [
+        "Artikel",
+        "Interview"
+      ],
+      "url": "https://www.antennesachsen.de/beitrag/warum-die-leipziger-cdu-fraktion-jetzt-einen-aegyptischen-tierarzt-hat-859984/",
+      "description": "Bericht mit Interview über den Beitritt zur CDU-Fraktion und seine kommunalpolitische Arbeit.",
+      "category": "politische-arbeit",
+      "featured": null
+    },
+    {
+      "id": "press-13",
+      "title": "Schwere Vorwürfe: Warum Getu Abraham die Leipziger SPD verlässt",
+      "medium": "LVZ",
+      "date": "2024-11-11",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.lvz.de/lokales/leipzig/leipzig-spd-politiker-getu-abraham-verlaesst-partei-und-stadtratsfraktion-TWNZK2CAKZHANAKAIYVOSUKFH4.html",
+      "description": "Hintergrundbericht über den Austritt aus der Leipziger SPD und ihrer Stadtratsfraktion.",
+      "category": "politische-arbeit",
+      "featured": null
+    },
+    {
+      "id": "press-14",
+      "title": "Leipziger Stadtrat: Prof. Getu Abraham verlässt Fraktion und SPD",
+      "medium": "Leipziger Zeitung",
+      "date": "2024-11-09",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.l-iz.de/politik/leipzig/2024/11/leipziger-stadtrat-prof-getu-abrahamn-fraktion-spd-608264",
+      "description": "Bericht über die Bekanntgabe des Austritts aus der SPD und ihrer Stadtratsfraktion.",
+      "category": "politische-arbeit",
+      "featured": null
+    },
+    {
+      "id": "press-15",
+      "title": "„Das ist immer meine Motivation, Leute dahin zu bewegen, dass sie sich beteiligen“",
+      "medium": "Leipziger Zeitung",
+      "date": "2024-04-30",
+      "types": [
+        "Interview"
+      ],
+      "url": "https://www.l-iz.de/politik/leipzig/2024/04/professor-dr-getu-abraham-spd-motivation-leute-dahinzubewegen-beteiligen-583450",
+      "description": "Interview über Stadtratsarbeit, gesellschaftliches Engagement und politische Beteiligung.",
+      "category": "politische-arbeit",
+      "featured": null
+    },
+    {
+      "id": "press-16",
+      "title": "Leuschnerplatz – Was ist geplant?",
+      "medium": "Ahoi Leipzig",
+      "date": "2021-06-29",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://ahoi-leipzig.de/artikel/was-ist-geplant-747/",
+      "description": "Beitrag über die Planungen am Wilhelm-Leuschner-Platz mit Getu Abrahams damaliger stadtpolitischer Position.",
+      "category": "politische-arbeit",
+      "featured": null
+    }
+  ]
+}

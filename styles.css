@@ -111,6 +111,7 @@ body::before {
 
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -126,6 +127,7 @@ body::before {
   font-size: 0.96rem;
 }
 
+.site-nav a[aria-current="page"],
 .site-nav a:hover {
   text-decoration: underline;
 }
@@ -1356,4 +1358,16 @@ h2 {
   outline: none;
   background: white;
   box-shadow: 0 0 0 4px rgba(216, 92, 61, 0.13);
+}
+
+/* Compact navigation; use a balanced 3 + 2 layout below 360px. */
+@media (max-width: 420px) {
+  .site-nav { gap: 0; }
+  .site-nav a { font-size: 0.75rem; }
+}
+
+@media (max-width: 359px) {
+  .site-nav { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .site-nav a { grid-column: span 2; font-size: 0.83rem; }
+  .site-nav a:nth-last-child(-n + 2) { grid-column: span 3; }
 }
