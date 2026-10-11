@@ -386,14 +386,14 @@ h2 {
 }
 
 .profile-grid,
-.issue-grid,
 .event-list,
 .voice-grid,
 .support-grid {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
+.profile-grid,
 .voice-grid,
 .support-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -444,7 +444,6 @@ h2 {
   }
 }
 
-.issue-grid,
 .event-list {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 4rem;
@@ -457,7 +456,7 @@ h2 {
 .support-card {
   padding: 2rem;
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 28px;
   background: rgba(255, 251, 245, 0.78);
   transition: transform 500ms ease, opacity 500ms ease;
 }
@@ -583,23 +582,22 @@ h2 {
 
 .agenda {
   display: grid;
-  gap: 4rem;
+  gap: 1.5rem;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 .agenda-panel,
 .agenda-list {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  backdrop-filter: none;
+  padding: 2.25rem;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: rgba(255, 250, 243, 0.8);
   transition: transform 500ms ease, opacity 500ms ease;
 }
 
 .agenda-list {
   display: grid;
-  align-content: start;
+  align-content: stretch;
   gap: 2rem;
 }
 
@@ -631,8 +629,8 @@ h2 {
 }
 
 .support-grid {
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
   align-items: stretch;
 }
 
@@ -640,8 +638,9 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 2.5rem;
-  box-shadow: none;
+  padding: 2rem;
+  background: rgba(255, 250, 243, 0.84);
+  box-shadow: var(--shadow);
 }
 
 .support-card .button {
@@ -758,41 +757,41 @@ h2 {
   line-height: 1.7;
 }
 
-.profile-grid {
-  display: block;
-}
-
-.profile-card {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: 3rem;
-  padding: 2.5rem 0;
-  border: 0;
-  border-top: 1px solid var(--line);
-  border-radius: 0;
-  background: none;
-  backdrop-filter: none;
-}
-
-.profile-card h3 {
-  max-width: 26ch;
-  margin: 1rem 0 0;
-}
-
-.profile-card > p,
-.issue-card p {
+.profile-card > p:not(.profile-label) {
   margin: 0;
   font-size: 1.08rem;
   line-height: 1.7;
 }
 
-.issue-card {
-  padding: 2.5rem 0;
-  border: 0;
-  border-top: 1px solid var(--line);
-  border-radius: 0;
-  background: none;
-  backdrop-filter: none;
+.issue-list {
+  max-width: 72ch;
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.issue-item {
+  padding-left: 0.5rem;
+}
+
+.issue-item + .issue-item {
+  margin-top: 1.75rem;
+}
+
+.issue-item::marker {
+  color: var(--accent-dark);
+}
+
+.issue-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.issue-item strong {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .agenda-panel h2 {
@@ -814,20 +813,6 @@ h2 {
 
 .support-card h3 {
   margin: 0.5rem 0 0;
-}
-
-.support-card#spenden {
-  grid-row: span 2;
-  justify-content: center;
-  padding: clamp(2rem, 5vw, 4rem);
-  background: rgba(239, 198, 163, 0.28);
-}
-
-.support-card#spenden h3 {
-  max-width: 18ch;
-  font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(2rem, 3.2vw, 2.8rem);
-  line-height: 1.15;
 }
 
 @media (max-width: 980px) {
@@ -864,9 +849,9 @@ h2 {
     height: 36rem;
   }
 
-  .profile-card,
-  .agenda {
-    gap: 2rem;
+  .profile-grid,
+  .support-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .footer-details {
@@ -997,26 +982,26 @@ h2 {
     font-size: 1rem;
   }
 
-  .profile-card,
-  .issue-grid,
+  .profile-grid,
   .agenda,
   .support-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .profile-card {
-    gap: 1.25rem;
-    padding: 2rem 0;
+  .profile-card,
+  .agenda-panel,
+  .agenda-list {
+    padding: 1.75rem;
+    border-radius: 24px;
   }
 
   .profile-card h3,
-  .issue-card h3,
   .support-card h3 {
     font-size: 1.35rem;
   }
 
-  .profile-card > p,
-  .issue-card p,
+  .profile-card > p:not(.profile-label),
+  .issue-item p,
   .agenda-panel p,
   .agenda-list p,
   .cta-copy > p:not(.eyebrow),
@@ -1024,12 +1009,8 @@ h2 {
     font-size: 1rem;
   }
 
-  .issue-card {
-    padding: 2rem 0;
-  }
-
   .agenda {
-    gap: 2.5rem;
+    gap: 1.25rem;
   }
 
   .agenda-panel h2 {
@@ -1040,9 +1021,7 @@ h2 {
     gap: 1.25rem;
   }
 
-  .support-card,
-  .support-card#spenden {
-    grid-row: auto;
+  .support-card {
     padding: 1.75rem;
     border-radius: 22px;
   }
