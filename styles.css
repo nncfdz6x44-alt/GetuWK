@@ -512,7 +512,11 @@ h2 {
   text-transform: uppercase;
 }
 
-.issue-card h3,
+.issue-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.45rem;
+}
+
 .event-card h3 {
   margin: 0.8rem 0;
   font-size: 1.45rem;
