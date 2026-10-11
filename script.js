@@ -1,21 +1,20 @@
-const observer = new IntersectionObserver(
-  (entries) => {
+// Enhance visible content only when motion is supported and requested.
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
     });
-  },
-  {
-    threshold: 0.2,
-  }
-);
+  }, { threshold: 0.08 });
 
-document
-  .querySelectorAll(".profile-card, .issue-card, .voice-card, .event-card, .agenda-panel, .agenda-list, .support-card")
-  .forEach((element) => observer.observe(element));
-
+  document.querySelectorAll(".profile-card, .issue-card, .agenda-panel, .agenda-list, .support-card")
+    .forEach((element) => {
+      element.classList.add("reveal-pending");
+      observer.observe(element);
+    });
+}
 
 const newsletterDialog = document.querySelector("#newsletter-dialog");
 const newsletterOpeners = document.querySelectorAll("[data-newsletter-open]");
