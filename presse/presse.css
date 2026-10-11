@@ -230,7 +230,7 @@
 }
 
 .press-list-meta .press-medium { order: 1; }
-.press-list-meta time { order: 0; }
+.press-list-meta time, .press-list-meta .press-date { order: 0; }
 .press-list-meta .press-type { order: 2; padding: 0; border: 0; }
 
 .press-list-copy h3 {

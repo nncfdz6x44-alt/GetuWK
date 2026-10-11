@@ -122,96 +122,59 @@
       "featured": null
     },
     {
-      "id": "press-10",
-      "title": "Kein Ponyhof",
-      "medium": "kreuzer",
-      "date": "2025-05-04",
+      "id": "science-01",
+      "title": "Biomarker ermöglichen frühe Diagnose bei Euterentzündung der Milchkuh",
+      "medium": "Universität Leipzig",
+      "date": "2021-03-22",
       "types": [
         "Artikel"
       ],
-      "url": "https://kreuzer-leipzig.de/2025/05/04/getu-abraham-leipzig-stadtrat-spd-cdu-rassismusvorwuerfe",
-      "description": "Porträt über Getu Abrahams Beruf, seine Stadtratsarbeit und seinen politischen Weg.",
-      "category": "politische-arbeit",
-      "featured": null,
-      "format": "Porträt"
+      "format": "Pressemitteilung",
+      "url": "https://www.uni-leipzig.de/newsdetail/artikel/biomarker-ermoeglichen-fruehe-diagnose-bei-euterentzuendung-der-milchkuh-2021-03-22-1",
+      "description": "Getu Abraham und sein Forschungsteam entwickeln ein Verfahren zur frühen Diagnose und Verlaufskontrolle von Euterentzündungen bei Milchkühen.",
+      "category": "wissenschaft-engagement",
+      "featured": null
     },
     {
-      "id": "press-11",
-      "title": "Ex-SPD-Stadtrat Getu Abraham geht zur CDU-Fraktion",
-      "medium": "LVZ",
-      "date": "2025-03-13",
+      "id": "science-02",
+      "title": "Forscher untersuchen Putenherzen – Rückschlüsse auf Herzerkrankungen beim Menschen?",
+      "medium": "Universitätsklinikum Leipzig",
+      "date": "2017-12-19",
       "types": [
         "Artikel"
       ],
-      "url": "https://www.lvz.de/lokales/leipzig/leipzig-ex-spd-stadtrat-getu-abraham-wechselt-zur-cdu-fraktion-74NQJMCYFRCYPGKO7XAAOYRQ3E.html",
-      "description": "Die LVZ berichtet über den Wechsel des parteilosen Stadtrats in die CDU-Fraktion.",
-      "category": "politische-arbeit",
+      "format": "Pressemitteilung",
+      "url": "https://www.uniklinikum-leipzig.de/presse/Seiten/Pressemitteilung_6404.aspx",
+      "description": "Ein Forschungsprojekt unter der Leitung von Getu Abraham untersucht Veränderungen der Herzfunktion bei Puten und mögliche Erkenntnisse für die Humanmedizin.",
+      "category": "wissenschaft-engagement",
       "featured": null
     },
     {
-      "id": "press-12",
-      "title": "Darum hat die Leipziger CDU-Fraktion jetzt auch einen äthiopischen Tierarzt",
-      "medium": "Antenne Sachsen",
-      "date": "2025-03-13",
-      "types": [
-        "Artikel",
-        "Interview"
-      ],
-      "url": "https://www.antennesachsen.de/beitrag/warum-die-leipziger-cdu-fraktion-jetzt-einen-aegyptischen-tierarzt-hat-859984/",
-      "description": "Bericht mit Interview über den Beitritt zur CDU-Fraktion und seine kommunalpolitische Arbeit.",
-      "category": "politische-arbeit",
-      "featured": null
-    },
-    {
-      "id": "press-13",
-      "title": "Schwere Vorwürfe: Warum Getu Abraham die Leipziger SPD verlässt",
-      "medium": "LVZ",
-      "date": "2024-11-11",
+      "id": "science-03",
+      "title": "Höchste Auszeichnung für Leipziger Tierarzt",
+      "medium": "Universität Leipzig / idw",
+      "date": "2008-02-07",
       "types": [
         "Artikel"
       ],
-      "url": "https://www.lvz.de/lokales/leipzig/leipzig-spd-politiker-getu-abraham-verlaesst-partei-und-stadtratsfraktion-TWNZK2CAKZHANAKAIYVOSUKFH4.html",
-      "description": "Hintergrundbericht über den Austritt aus der Leipziger SPD und ihrer Stadtratsfraktion.",
-      "category": "politische-arbeit",
+      "format": "Pressemitteilung",
+      "url": "https://nachrichten.idw-online.de/2008/02/07/hoechste-auszeichnung-fuer-leipziger-tierarzt",
+      "description": "Die Akademie für Tiergesundheit zeichnet Getu Abraham für seine Forschung zu Rezeptoren in den Atemwegen des Pferdes aus.",
+      "category": "wissenschaft-engagement",
       "featured": null
     },
     {
-      "id": "press-14",
-      "title": "Leipziger Stadtrat: Prof. Getu Abraham verlässt Fraktion und SPD",
-      "medium": "Leipziger Zeitung",
-      "date": "2024-11-09",
-      "types": [
-        "Artikel"
-      ],
-      "url": "https://www.l-iz.de/politik/leipzig/2024/11/leipziger-stadtrat-prof-getu-abrahamn-fraktion-spd-608264",
-      "description": "Bericht über die Bekanntgabe des Austritts aus der SPD und ihrer Stadtratsfraktion.",
-      "category": "politische-arbeit",
-      "featured": null
-    },
-    {
-      "id": "press-15",
-      "title": "„Das ist immer meine Motivation, Leute dahin zu bewegen, dass sie sich beteiligen“",
-      "medium": "Leipziger Zeitung",
-      "date": "2024-04-30",
+      "id": "science-04",
+      "title": "Getu Abraham im Porträt: Bildungschancen und gesellschaftliches Engagement",
+      "medium": "herzkampf",
+      "date": null,
       "types": [
         "Interview"
       ],
-      "url": "https://www.l-iz.de/politik/leipzig/2024/04/professor-dr-getu-abraham-spd-motivation-leute-dahinzubewegen-beteiligen-583450",
-      "description": "Interview über Stadtratsarbeit, gesellschaftliches Engagement und politische Beteiligung.",
-      "category": "politische-arbeit",
-      "featured": null
-    },
-    {
-      "id": "press-16",
-      "title": "Leuschnerplatz – Was ist geplant?",
-      "medium": "Ahoi Leipzig",
-      "date": "2021-06-29",
-      "types": [
-        "Artikel"
-      ],
-      "url": "https://ahoi-leipzig.de/artikel/was-ist-geplant-747/",
-      "description": "Beitrag über die Planungen am Wilhelm-Leuschner-Platz mit Getu Abrahams damaliger stadtpolitischer Position.",
-      "category": "politische-arbeit",
+      "format": "Porträt & Interview",
+      "url": "https://herzkampf.de/portfolio/getu-abraham/",
+      "description": "Im Porträt spricht Getu Abraham über seinen Lebensweg, Bildungschancen für Kinder in Äthiopien und ein respektvolles Miteinander.",
+      "category": "wissenschaft-engagement",
       "featured": null
     }
   ]

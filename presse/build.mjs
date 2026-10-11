@@ -9,29 +9,29 @@ const dateLabel = (date) => date.split("-").reverse().join(".");
 const arrow = '<svg class="press-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
 
 assert.match(contactEmail, /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-assert.ok(articles.length >= 16, "All 16 core articles must be present.");
-for (let number = 1; number <= 16; number++) {
-  const id = `press-${String(number).padStart(2, "0")}`;
-  assert.ok(articles.some((article) => article.id === id), `Missing core article: ${id}`);
-}
+assert.ok(articles.length >= 13, "All 13 requested articles must be present.");
+const requiredIds = [...Array.from({ length: 9 }, (_, i) => `press-${String(i + 1).padStart(2, "0")}`), ...Array.from({ length: 4 }, (_, i) => `science-${String(i + 1).padStart(2, "0")}`)];
+for (const id of requiredIds) assert.ok(articles.some((article) => article.id === id), `Missing required article: ${id}`);
 assert.equal(new Set(articles.map((article) => article.id)).size, articles.length, "Duplicate article IDs.");
 assert.equal(new Set(articles.map((article) => article.url)).size, articles.length, "Duplicate article URLs.");
 for (const article of articles) {
-  for (const key of ["id", "title", "medium", "date", "description", "category", "url"]) assert.ok(article[key], `Missing ${key}.`);
-  assert.match(article.date, /^\d{4}-\d{2}-\d{2}$/);
-  assert.equal(new Date(`${article.date}T00:00:00Z`).toISOString().slice(0, 10), article.date);
+  for (const key of ["id", "title", "medium", "description", "category", "url"]) assert.ok(article[key], `Missing ${key}.`);
+  if (article.date !== null) {
+    assert.match(article.date, /^\d{4}-\d{2}-\d{2}$/);
+    assert.equal(new Date(`${article.date}T00:00:00Z`).toISOString().slice(0, 10), article.date);
+  }
   assert.equal(new URL(article.url).protocol, "https:");
-  assert.ok(["obm-wahl", "politische-arbeit"].includes(article.category));
+  assert.ok(["obm-wahl", "wissenschaft-engagement"].includes(article.category));
   assert.ok(article.types.length && article.types.every((type) => ["Artikel", "Interview", "Audio", "Video"].includes(type)));
 }
-const sorted = [...articles].sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
+const sorted = [...articles].sort((a, b) => (b.date || "").localeCompare(a.date || "") || a.id.localeCompare(b.id));
 const primary = sorted.filter((article) => article.featured === "primary");
 const secondary = sorted.filter((article) => article.featured === "secondary");
 assert.equal(primary.length, 1);
 assert.equal(secondary.length, 2);
 const typeLabel = (article) => article.format || article.types.join(" & ");
 const attributes = (article) => `href="${escape(article.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escape(article.title)} – ${escape(article.medium)} (öffnet einen neuen Tab)" data-press-id="${escape(article.id)}"`;
-const metadata = (article) => `<span class="press-medium">${escape(article.medium)}</span><time datetime="${article.date}">${dateLabel(article.date)}</time><span class="press-type">${escape(typeLabel(article))}</span>`;
+const metadata = (article) => `<span class="press-medium">${escape(article.medium)}</span>${article.date ? `<time datetime="${article.date}">${dateLabel(article.date)}</time>` : '<span class="press-date">Ohne Datumsangabe</span>'}<span class="press-type">${escape(typeLabel(article))}</span>`;
 const actionLabel = (article) => article.types.includes("Video") ? "Beitrag mit Video ansehen" : article.types.includes("Audio") ? "Interview anhören" : "Artikel lesen";
 const card = (article, featured = false) => `<article class="press-card${featured ? " press-card--featured" : ""}">
   <a class="press-card-link" ${attributes(article)}>
@@ -50,13 +50,12 @@ const list = (items) => `<ul class="press-list">${items.map((article) => `
     <div class="press-list-copy"><h3>${escape(article.title)}</h3><p>${escape(article.description)}</p></div>
     ${arrow}
   </a></li>`).join("")}\n</ul>`;
-const archive = sorted.filter((article) => article.category === "politische-arbeit");
-const years = [...new Set(archive.map((article) => article.date.slice(0, 4)))];
+const engagement = sorted.filter((article) => article.category === "wissenschaft-engagement");
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Presse & Medien | Getu Abraham",
-  description: "Medienberichte, Interviews und Pressekontakt zur Kandidatur von Prof. Dr. Getu Abraham bei der Leipziger Oberbürgermeisterwahl 2027.",
+  description: "Medienberichte, Wissenschaft, Engagement und Pressekontakt zur Kandidatur von Prof. Dr. Getu Abraham bei der Leipziger Oberbürgermeisterwahl 2027.",
   url: "https://www.getu-abraham.de/presse/",
   mainEntity: { "@type": "ItemList", itemListElement: sorted.map((article, index) => ({ "@type": "ListItem", position: index + 1, name: article.title, url: article.url })) }
 };
@@ -64,7 +63,7 @@ const replacements = {
   CONTACT_EMAIL: escape(contactEmail),
   FEATURED: card(primary[0], true) + '\n<div class="press-secondary">' + secondary.map((article) => card(article)).join("\n") + "</div>",
   RECENT: list(sorted.filter((article) => article.category === "obm-wahl" && !article.featured)),
-  ARCHIVE: years.map((year) => `<div class="press-year"><h3 class="press-year-title">${year}</h3>${list(archive.filter((article) => article.date.startsWith(year)))}</div>`).join("\n"),
+  ENGAGEMENT: list(engagement),
   STRUCTURED_DATA: JSON.stringify(structuredData).replace(/</g, "\\u003c")
 };
 const html = template.replace(/\{\{([A-Z_]+)\}\}/g, (match, key) => {
