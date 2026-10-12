@@ -1035,6 +1035,10 @@ h2 {
     margin: 1.5rem 0 0;
   }
 
+  .hero-visual img {
+    object-position: center bottom;
+  }
+
   .hero-statement {
     order: 3;
     max-width: 36ch;
