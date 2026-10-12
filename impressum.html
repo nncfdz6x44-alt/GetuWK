@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20261011-02" />
+    <link rel="stylesheet" href="./styles.css?v=20261012-01" />
   </head>
   <body>
     <div class="page-shell">
@@ -36,7 +36,7 @@
           type="button"
           class="button button-small"
           zeffy-form-link="https://www.zeffy.com/embed/donation-form/prof-dr-getu-abraham-fuer-leipzig?modal=true"
-        ><span class="donation-label-long">Kampagne unterstützen</span><span class="donation-label-short">Spenden</span></button>
+        >Spenden</button>
       </header>
 
       <main id="top">
@@ -68,9 +68,7 @@
             </p>
           </div>
         </section>
-      </main>
-
-      <footer class="site-footer" id="kontakt">
+      <section class="donation-section" aria-labelledby="donation-title">
         <div class="footer-photo">
           <img
             src="./bilder/getu-mit-hund.jpg"
@@ -81,19 +79,33 @@
           />
         </div>
         <div class="footer-details">
+          <h2 class="donation-title" id="donation-title">Für Spenden</h2>
           <div class="footer-donations">
-            <p class="eyebrow">Für Spenden</p>
             <p><strong>Zusammen für Leipzig e.V.</strong></p>
             <p>Sparkasse Leipzig</p>
             <p class="footer-bank-code"><strong>IBAN:</strong> DE97 8605 5592 1090 4228 96</p>
             <p class="footer-bank-code"><strong>BIC:</strong> WELADE8LXXX</p>
             <p class="footer-purpose">Als Verwendungszweck bitte angeben: <strong>OBM-Getu</strong></p>
           </div>
+          <button type="button" class="button donation-button" zeffy-form-link="https://www.zeffy.com/embed/donation-form/prof-dr-getu-abraham-fuer-leipzig?modal=true">Spenden</button>
+          <p class="donation-receipt">Bitte geben Sie bei Ihrer Überweisung Ihren Namen und Ihre Anschrift an, zum Beispiel: <strong><em>Max Mustermann, Wahlkampfspende, Musterstraße 22, 04109 Leipzig</em></strong>. Selbstverständlich erhalten Sie eine Spendenbescheinigung, sodass Sie diese steuerlich geltend machen können.</p>
+        </div>
+      </section>
+      </main>
+
+      <footer class="site-footer" id="kontakt">
+        <div class="footer-contact-copy">
           <p class="eyebrow">Kontakt</p>
-          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/getu_abraham_leipzig/" target="_blank" rel="noreferrer">@getu_abraham_leipzig</a></p>
-          <p><strong>E-Mail:</strong> <a href="mailto:kontakt@getu-abraham.de">kontakt@getu-abraham.de</a></p>
           <p><strong>Wählerverein:</strong> Zusammen für Leipzig e.V.</p>
-          <p><a href="./impressum.html">Impressum</a></p>
+          <a class="footer-email" href="mailto:kontakt@getu-abraham.de">kontakt@getu-abraham.de</a>
+        </div>
+        <div class="footer-links">
+          <nav class="footer-social" aria-label="Kontakt und soziale Medien">
+            <a class="button button-secondary" href="https://www.instagram.com/getu_abraham_leipzig/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="button button-secondary" href="https://www.facebook.com/getu.abraham.9" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="button button-secondary" href="mailto:kontakt@getu-abraham.de">E-Mail</a>
+          </nav>
+          <a class="footer-legal-link" href="./impressum.html">Impressum</a>
         </div>
       </footer>
     </div>

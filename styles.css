@@ -65,7 +65,7 @@ body::before {
 .event-card,
 .voice-card,
 .support-card,
-.site-footer {
+.donation-section {
   backdrop-filter: blur(18px);
 }
 
@@ -316,7 +316,7 @@ h2 {
   position: relative;
   min-width: 0;
   height: clamp(36rem, calc(100svh - 9rem), 46rem);
-  margin: 0 calc((100vw - min(1180px, calc(100vw - 3rem))) / -2) 0 0;
+  margin: 0;
   isolation: isolate;
 }
 
@@ -335,7 +335,7 @@ h2 {
   height: 100%;
   display: block;
   object-fit: contain;
-  object-position: center bottom;
+  object-position: right bottom;
   mask-image: linear-gradient(to bottom, #000 87%, transparent 100%);
   animation: hero-image-in 900ms cubic-bezier(.2,.75,.25,1) both;
   transition: transform 700ms cubic-bezier(.2,.75,.25,1);
@@ -492,7 +492,8 @@ h2 {
 
 .profile-card h3,
 .voice-card h3,
-.support-card h3 {
+.support-card h3,
+.donation-title {
   margin-bottom: 1.25rem;
   font-size: 1.45rem;
   line-height: 1.25;
@@ -649,7 +650,7 @@ h2 {
   margin-top: 1.5rem;
 }
 
-.site-footer {
+.donation-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: stretch;
@@ -690,9 +691,7 @@ h2 {
 }
 
 .footer-donations {
-  margin-bottom: 2.5rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.5rem;
 }
 
 .footer-donations .eyebrow {
@@ -710,6 +709,98 @@ h2 {
 
 .footer-purpose {
   margin-top: 0.9rem;
+}
+
+
+.donation-title {
+  color: var(--accent-dark);
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.footer-details .footer-donations p {
+  margin-bottom: 0.5rem;
+}
+
+.donation-button {
+  align-self: flex-start;
+}
+
+.footer-details .donation-receipt {
+  margin: 1.5rem 0 0;
+  max-width: 55ch;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.site-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.footer-contact-copy {
+  min-width: 0;
+}
+
+.footer-contact-copy .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.footer-contact-copy p:not(.eyebrow) {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-email,
+.footer-legal-link {
+  color: var(--muted);
+  text-underline-offset: 0.25em;
+  overflow-wrap: anywhere;
+}
+
+.footer-links {
+  display: grid;
+  gap: 1rem;
+  justify-items: end;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-social .button {
+  min-height: 2.75rem;
+  padding: 0.7rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .site-footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-items: start;
+  }
+
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-social .button {
+    flex: 1 1 auto;
+  }
 }
 
 .legal-page {
@@ -943,7 +1034,7 @@ h2 {
   .hero-visual {
     order: 2;
     height: clamp(16rem, 32svh, 20rem);
-    margin: 1.5rem -1.25rem 0;
+    margin: 1.5rem 0 0;
   }
 
   .hero-statement {
@@ -1006,7 +1097,8 @@ h2 {
   }
 
   .profile-card h3,
-  .support-card h3 {
+  .support-card h3,
+  .donation-title {
     font-size: 1.35rem;
   }
 
@@ -1040,7 +1132,7 @@ h2 {
     width: 100%;
   }
 
-  .site-footer {
+  .donation-section {
     grid-template-columns: minmax(0, 1fr);
     border-radius: 24px;
   }

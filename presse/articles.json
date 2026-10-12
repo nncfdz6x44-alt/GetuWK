@@ -29,19 +29,6 @@
       "featured": "secondary"
     },
     {
-      "id": "press-03",
-      "title": "OBM-Kandidatur: Getu Abraham verlässt CDU-Fraktion im Leipziger Stadtrat",
-      "medium": "LVZ",
-      "date": "2026-09-22",
-      "types": [
-        "Artikel"
-      ],
-      "url": "https://www.lvz.de/lokales/leipzig/obm-kandidatur-getu-abraham-verlaesst-cdu-fraktion-im-leipziger-stadtrat-JQI6VMOUQZEFBBXBBKQGM4K4ZA.html",
-      "description": "Bericht über das Ende der Zusammenarbeit mit der CDU-Fraktion im Zuge der unabhängigen OBM-Kandidatur.",
-      "category": "obm-wahl",
-      "featured": null
-    },
-    {
       "id": "press-04",
       "title": "Leipziger Stadtrat Abraham will als unabhängiger OBM-Kandidat antreten",
       "medium": "LVZ",
@@ -55,20 +42,6 @@
       "featured": null
     },
     {
-      "id": "press-05",
-      "title": "Darum will ER Leipziger Oberbürgermeister werden",
-      "medium": "Radio Leipzig",
-      "date": "2026-09-21",
-      "types": [
-        "Interview",
-        "Audio"
-      ],
-      "url": "https://www.radioleipzig.de/beitrag/darum-will-er-leipzigs-erster-afrikanischer-ob-werden-894201/",
-      "description": "Getu Abraham äußert sich zu seinen Zielen, zur wirtschaftlichen Entwicklung Leipzigs und zur Förderung von Start-ups.",
-      "category": "obm-wahl",
-      "featured": "secondary"
-    },
-    {
       "id": "press-06",
       "title": "„Loyalität gilt keinem Parteiprogramm“: Getu Abraham will Leipzigs Oberbürgermeister werden",
       "medium": "TAG24",
@@ -79,7 +52,7 @@
       "url": "https://www.tag24.de/leipzig/buergermeisterwahl/loyalitaet-gilt-keinem-parteiprogramm-getu-abraham-will-leipzigs-oberbuergermeister-werden-3533976",
       "description": "TAG24 berichtet über die parteiunabhängige Kandidatur und Abrahams Motivation für das Oberbürgermeisteramt.",
       "category": "obm-wahl",
-      "featured": null
+      "featured": "secondary"
     },
     {
       "id": "press-07",

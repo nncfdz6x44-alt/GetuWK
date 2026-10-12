@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../styles.css?v=20261011-02" />
+    <link rel="stylesheet" href="../styles.css?v=20261012-01" />
     <link rel="stylesheet" href="./presse.css" />
     <script type="application/ld+json">{{STRUCTURED_DATA}}</script>
   </head>
@@ -33,13 +33,13 @@
           <a href="./" aria-current="page">Presse</a>
           <a href="../#kontakt">Kontakt</a>
         </nav>
-        <button type="button" class="button button-small" zeffy-form-link="https://www.zeffy.com/embed/donation-form/prof-dr-getu-abraham-fuer-leipzig?modal=true"><span class="donation-label-long">Kampagne unterstützen</span><span class="donation-label-short">Spenden</span></button>
+        <button type="button" class="button button-small" zeffy-form-link="https://www.zeffy.com/embed/donation-form/prof-dr-getu-abraham-fuer-leipzig?modal=true">Spenden</button>
       </header>
       <main id="presse" class="press-main">
         <section class="press-intro" aria-labelledby="press-title">
           <p class="eyebrow">Getu Abraham für Leipzig</p>
           <h1 id="press-title">Presse &amp; Medien</h1>
-          <p class="press-lead">Hier finden Sie aktuelle Medienberichte, Interviews und Beiträge über Prof. Dr. Getu Abraham, seine politische Arbeit und seine Kandidatur für das Amt des Leipziger Oberbürgermeisters.</p>
+          <p class="press-lead">Hier finden Sie aktuelle Medienberichte, Interviews und Beiträge über mich, meine politische Arbeit und meine Kandidatur für das Amt des Leipziger Oberbürgermeisters.</p>
           <div class="press-contact">
             <div><h2>Presseanfragen &amp; Kontakt</h2><p>Für Interviewanfragen, Hintergrundgespräche und weitere Informationen stehen wir Ihnen gerne zur Verfügung.</p></div>
             <div class="press-contact-action"><a class="press-email" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a><a class="button" href="mailto:{{CONTACT_EMAIL}}">Pressekontakt aufnehmen</a></div>
@@ -59,9 +59,20 @@
           {{ENGAGEMENT}}
         </section>
       </main>
-      <footer class="press-footer">
-        <span>Getu Abraham · Leipzig bewegen</span>
-        <nav aria-label="Weitere Informationen"><a href="../">Startseite</a><a href="https://www.instagram.com/getu_abraham_leipzig/" target="_blank" rel="noopener noreferrer">Instagram <span class="press-sr-only">(öffnet einen neuen Tab)</span></a><a href="../impressum.html">Impressum</a></nav>
+      <footer class="site-footer" id="kontakt">
+        <div class="footer-contact-copy">
+          <p class="eyebrow">Kontakt</p>
+          <p><strong>Wählerverein:</strong> Zusammen für Leipzig e.V.</p>
+          <a class="footer-email" href="mailto:kontakt@getu-abraham.de">kontakt@getu-abraham.de</a>
+        </div>
+        <div class="footer-links">
+          <nav class="footer-social" aria-label="Kontakt und soziale Medien">
+            <a class="button button-secondary" href="https://www.instagram.com/getu_abraham_leipzig/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="button button-secondary" href="https://www.facebook.com/getu.abraham.9" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="button button-secondary" href="mailto:kontakt@getu-abraham.de">E-Mail</a>
+          </nav>
+          <a class="footer-legal-link" href="../impressum.html">Impressum</a>
+        </div>
       </footer>
     </div>
     <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>

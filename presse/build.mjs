@@ -9,8 +9,8 @@ const dateLabel = (date) => date.split("-").reverse().join(".");
 const arrow = '<svg class="press-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>';
 
 assert.match(contactEmail, /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-assert.ok(articles.length >= 13, "All 13 requested articles must be present.");
-const requiredIds = [...Array.from({ length: 9 }, (_, i) => `press-${String(i + 1).padStart(2, "0")}`), ...Array.from({ length: 4 }, (_, i) => `science-${String(i + 1).padStart(2, "0")}`)];
+assert.ok(articles.length >= 11, "All 11 requested articles must be present.");
+const requiredIds = [...Array.from({ length: 9 }, (_, i) => `press-${String(i + 1).padStart(2, "0")}`).filter((id) => !["press-03", "press-05"].includes(id)), ...Array.from({ length: 4 }, (_, i) => `science-${String(i + 1).padStart(2, "0")}`)];
 for (const id of requiredIds) assert.ok(articles.some((article) => article.id === id), `Missing required article: ${id}`);
 assert.equal(new Set(articles.map((article) => article.id)).size, articles.length, "Duplicate article IDs.");
 assert.equal(new Set(articles.map((article) => article.url)).size, articles.length, "Duplicate article URLs.");
