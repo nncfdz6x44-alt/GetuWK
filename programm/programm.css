@@ -725,3 +725,10 @@
     transform: none;
   }
 }
+
+
+@media (max-width: 720px) {
+  .program-topic { grid-template-columns: minmax(0, 1fr); }
+  .topic-index, .topic-content { min-width: 0; }
+  .topic-index p, .topic-content h3 { overflow-wrap: anywhere; }
+}

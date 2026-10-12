@@ -27,11 +27,11 @@ Die generierte `index.html` zusammen mit der Datenquelle committen. Die Seite fu
 - In der Navigation steht auf Startseite, Presseseite, Programm und Impressum wieder „Prof. Dr. Getu Abraham“. Die mobile Kopfzeile erlaubt einen natürlichen Namensumbruch neben dem Spendenbutton.
 - Die Beschreibungen sind kurze, sachliche Zusammenfassungen. Keine vollständigen Medienartikel oder fremden Pressefotos wurden übernommen.
 - Die drei optionalen Archivquellen sind nicht aufgenommen.
-- Das Featured-Porträt verwendet ausschließlich das vorhandene Kampagnenbild. Externe Audio-/Video-Inhalte werden nicht eingebettet. Bestehende gemeinsame Website-Funktionen bleiben verfügbar.
+- Das hervorgehobene MDR-Kärtchen verwendet das vom Auftraggeber bereitgestellte Foto mit Pferd. Externe Audio-/Video-Inhalte werden nicht eingebettet. Bestehende gemeinsame Website-Funktionen bleiben verfügbar.
 
 ## Prüfung und Veröffentlichung
 
-Lokal geprüft: Desktop 1440px, Tablet 768px, Smartphones 390px und 320px; keine horizontalen Textüberläufe. Auf sehr schmalen Displays werden die fünf Navigationslinks ausgewogen auf 3 + 2 verteilt. Alle 11 Beiträge sind genau einmal vorhanden, Listen chronologisch sortiert, externe Links mit `target="_blank"` und `rel="noopener noreferrer"`, beide Kontaktlinks mit korrektem `mailto:`. Ein externer Artikel wurde durch tatsächlichen Klick im neuen Tab geöffnet; die Presseseite blieb geöffnet. Tastaturfokus auf Skip-Link und Artikelkarten ist sichtbar.
+Lokal geprüft: Desktop 1440px, Tablet 768px, Smartphones 390px und 320px; keine horizontalen Textüberläufe. Die fünf Navigationslinks liegen bis 980px in einem Burgermenü; der Spendenbutton bleibt sichtbar. Alle 11 Beiträge sind genau einmal vorhanden, Listen chronologisch sortiert, externe Links mit `target="_blank"` und `rel="noopener noreferrer"`, beide Kontaktlinks mit korrektem `mailto:`. Ein externer Artikel wurde durch tatsächlichen Klick im neuen Tab geöffnet; die Presseseite blieb geöffnet. Tastaturfokus auf Skip-Link und Artikelkarten ist sichtbar.
 
 Das Projekt besitzt keinen separaten Typecheck oder Linter. Der Node-Generator, Syntaxcheck und Abgleich der generierten HTML-Datei wurden erfolgreich ausgeführt.
 
@@ -40,3 +40,8 @@ Die Presseseite erhält in der Preview bewusst `noindex, follow`. Vor einer sepa
 ## Anpassung vom 12.10.2026
 
 Radio Leipzig („Darum will ER …“) und LVZ (CDU-Fraktionsaustritt) auf Wunsch entfernt. TAG24 („Loyalität gilt keinem Parteiprogramm“, 22.09.2026) übernimmt den hervorgehobenen Platz und erscheint genau einmal. Einheitlicher Spendenbutton und Kontakt-Footer mit Instagram, Facebook, E-Mail und Impressum.
+
+
+## Weitere Anpassung vom 12.10.2026
+
+Zeffy-Hinweis unter dem Text zur Spendenbescheinigung ergänzt. Der Kontakt-Footer enthält beschriftete Instagram-, Facebook- und E-Mail-Symbole statt Textbuttons; die Vereinszeile entfällt dort. Wissenschaftliche Veröffentlichungen sind am Seitenende auf Google Scholar verlinkt. Das neue Pressefoto wird unverändert mit natürlichem Hintergrund verwendet und für die Website verkleinert. Das gemeinsame Burgermenü unterstützt Escape, Tastaturfokus, Schließen nach Linkwahl und einen dauerhaft sichtbaren Spendenbutton. Ohne JavaScript bleiben die Navigationslinks sichtbar.

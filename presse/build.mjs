@@ -41,7 +41,7 @@ const card = (article, featured = false) => `<article class="press-card${feature
       <p class="press-description">${escape(article.description)}</p>
       <span class="press-action">${actionLabel(article)} ${arrow}</span>
     </div>
-    ${featured ? '<div class="press-card-photo"><img src="../bilder/getu-gundlach-freigestellt.png" alt="" width="1072" height="1467" loading="lazy" /></div>' : ""}
+    ${featured ? '<div class="press-card-photo"><img src="../bilder/getu-mit-pferd.jpg" alt="" width="1000" height="1499" loading="lazy" /></div>' : ""}
   </a>
 </article>`;
 const list = (items) => `<ul class="press-list">${items.map((article) => `
