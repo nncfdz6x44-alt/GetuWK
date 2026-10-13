@@ -14,29 +14,32 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20261012-02" />
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="./index.html" aria-label="Zur Startseite">
-          <span class="brand-mark">L</span>
           <span class="brand-copy">
             <strong>Prof. Dr. Getu Abraham</strong>
-            <span>Für ein offenes und starkes Leipzig</span>
+            <span>Leipzig bewegen</span>
           </span>
         </a>
-        <nav class="site-nav" aria-label="Hauptnavigation">
-          <a href="./index.html#profil">Profil</a>
-          <a href="/programm/">Themen</a>
-          <a href="./index.html#mitmachen">Mitmachen</a>
-          <a href="./index.html#kontakt">Kontakt</a>
-        </nav>
         <button
           type="button"
           class="button button-small"
           zeffy-form-link="https://www.zeffy.com/embed/donation-form/prof-dr-getu-abraham-fuer-leipzig?modal=true"
-        >Kampagne unterstützen</button>
+        >Spenden</button>
+        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" aria-label="Menü öffnen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path class="menu-line-top" d="M4 8h16"/><path class="menu-line-bottom" d="M4 16h16"/></svg>
+        </button>
+        <nav class="site-nav" id="site-navigation" aria-label="Hauptnavigation">
+          <a href="./index.html#profil">Profil</a>
+          <a href="./index.html#themen">Themen</a>
+          <a href="./index.html#mitmachen">Mitmachen</a>
+          <a href="./presse/">Presse</a>
+          <a href="./index.html#kontakt">Kontakt</a>
+        </nav>
       </header>
 
       <main id="top">
@@ -68,23 +71,49 @@
             </p>
           </div>
         </section>
+      <section class="donation-section" aria-labelledby="donation-title">
+        <div class="footer-photo">
+          <img
+            src="./bilder/getu-mit-hund.jpg"
+            alt="Prof. Dr. Getu Abraham begegnet einem Hund"
+            width="1000"
+            height="1500"
+            loading="lazy"
+          />
+        </div>
+        <div class="footer-details">
+          <h2 class="donation-title" id="donation-title">Für Spenden</h2>
+          <div class="footer-donations">
+            <p><strong>Zusammen für Leipzig e.V.</strong></p>
+            <p>Sparkasse Leipzig</p>
+            <p class="footer-bank-code"><strong>IBAN:</strong> DE97 8605 5592 1090 4228 96</p>
+            <p class="footer-bank-code"><strong>BIC:</strong> WELADE8LXXX</p>
+            <p class="footer-purpose">Als Verwendungszweck bitte angeben: <strong>OBM-Getu</strong></p>
+          </div>
+          <button type="button" class="button donation-button" zeffy-form-link="https://www.zeffy.com/embed/donation-form/prof-dr-getu-abraham-fuer-leipzig?modal=true">Spenden</button>
+          <p class="donation-receipt">Bitte geben Sie bei Ihrer Überweisung Ihren Namen und Ihre Anschrift an, zum Beispiel: <strong><em>Max Mustermann, Wahlkampfspende, Musterstraße 22, 04109 Leipzig</em></strong>. Selbstverständlich erhalten Sie eine Spendenbescheinigung, sodass Sie diese steuerlich geltend machen können.</p>
+          <p class="donation-note"><strong>Übrigens:</strong> Ihre Spende für #TeamGetu kommt vollständig bei Zusammen für Leipzig e.V. an. Im Formular wird zusätzlich ein freiwilliger Beitrag für unseren Dienstleister Zeffy vorgeschlagen. Dieser unterstützt ausschließlich Zeffy und gehört nicht zu Ihrer Spende für unsere Kampagne. Sie können den Zusatzbeitrag ändern oder auf <strong>0 €</strong> setzen.</p>
+        </div>
+      </section>
       </main>
 
       <footer class="site-footer" id="kontakt">
-        <div>
+        <div class="footer-contact-copy">
           <p class="eyebrow">Kontakt</p>
-          <h2>Der öffentliche Auftritt wird weiter ausgebaut.</h2>
+          <a class="footer-email" href="mailto:kontakt@getu-abraham.de">kontakt@getu-abraham.de</a>
         </div>
-        <div class="footer-details">
-          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/getu_abraham_leipzig/" target="_blank" rel="noreferrer">@getu_abraham_leipzig</a></p>
-          <p><strong>E-Mail:</strong> <a href="mailto:kontakt@getu-abraham.de">kontakt@getu-abraham.de</a></p>
-          <p><strong>Wählerverein:</strong> Zusammen für Leipzig e.V.</p>
-          <p><a href="./impressum.html">Impressum</a></p>
+        <div class="footer-links">
+          <nav class="footer-social" aria-label="Kontakt und soziale Medien">
+            <a class="button button-secondary" href="https://www.instagram.com/getu_abraham_leipzig/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a class="button button-secondary" href="https://www.facebook.com/getu.abraham.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 22v-9h3l.5-4H14V6.5c0-1.1.3-1.5 1.5-1.5H18V1.3A26 26 0 0 0 15 1c-3.2 0-5 1.9-5 5v3H7v4h3v9z"/></svg></a>
+            <a class="button button-secondary" href="mailto:kontakt@getu-abraham.de" aria-label="E-Mail" title="E-Mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a>
+          </nav>
+          <a class="footer-legal-link" href="./impressum.html">Impressum</a>
         </div>
       </footer>
     </div>
 
     <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20261012-02"></script>
   </body>
 </html>
