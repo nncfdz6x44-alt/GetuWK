@@ -2,6 +2,19 @@
   "contactEmail": "kontakt@getu-abraham.de",
   "articles": [
     {
+      "id": "press-10",
+      "title": "OB-Bewerber Getu Abraham will die Wirtschaft stärken und Jobs schaffen: „Stehe für zuhören und machen“",
+      "medium": "TAG24",
+      "date": "2026-10-18",
+      "types": [
+        "Artikel"
+      ],
+      "url": "https://www.tag24.de/leipzig/buergermeisterwahl/ob-bewerber-getu-abraham-will-die-wirtschaft-staerken-und-jobs-schaffen-stehe-fuer-zuhoeren-und-machen-3540849",
+      "description": "TAG24 stellt Getu Abrahams Pläne für Wirtschaft, Arbeitsplätze, eine leistungsfähige Verwaltung und den Dialog mit den Leipzigerinnen und Leipzigern vor.",
+      "category": "obm-wahl",
+      "featured": "secondary"
+    },
+    {
       "id": "press-01",
       "title": "Getu Abraham ist unabhängiger Kandidat bei Leipziger OB-Wahl",
       "medium": "MDR",
@@ -52,7 +65,7 @@
       "url": "https://www.tag24.de/leipzig/buergermeisterwahl/loyalitaet-gilt-keinem-parteiprogramm-getu-abraham-will-leipzigs-oberbuergermeister-werden-3533976",
       "description": "TAG24 berichtet über die parteiunabhängige Kandidatur und Abrahams Motivation für das Oberbürgermeisteramt.",
       "category": "obm-wahl",
-      "featured": "secondary"
+      "featured": null
     },
     {
       "id": "press-07",
@@ -152,3 +165,4 @@
     }
   ]
 }
+
