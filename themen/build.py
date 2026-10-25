@@ -11,6 +11,7 @@ from zipfile import ZipFile
 ROOT = Path(__file__).resolve().parent
 W = '{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
 SLUGS = ['wirtschaft', 'verwaltung', 'finanzen', 'mobilitaet', 'bildung', 'wohnen', 'oeffentlicher-raum', 'internationalitaet', 'klima', 'kultur', 'sport', 'stadtteile', 'buergerbeteiligung']
+LABELS = ['Wirtschaft und Wissen', 'Verwaltung', 'Finanzen', 'Mobilität', 'Schulen, Kitas und Familien', 'Wohnen', 'Öffentlicher Raum und Sicherheit', 'Internationalität und Weltoffenheit', 'Klima und Resilienz', 'Kultur', 'Sport', 'Stadtteile', 'Bürgerbeteiligung']
 
 
 def extract(source):
@@ -82,11 +83,22 @@ def rich(para):
 
 def render(data):
     result = []
-    for chapter in data['chapters']:
+    links = []
+    for number, chapter in enumerate(data['chapters'], 1):
         slug, heading = chapter['id'], chapter['heading']
+        label = LABELS[number - 1]
+        assert label in heading['text'], 'Navigation label must come from the original heading'
+        links.append(f'<li><a href="#{slug}" data-topic-link><span class="programme-link-number" aria-hidden="true">{number:02d}</span><span>{html.escape(label)}</span></a></li>')
         panel = []
         in_list = False
+        in_progress = False
         for para in chapter['paragraphs']:
+            if para['text'] == 'Fortschritt wird daran erkennbar, dass':
+                if in_list:
+                    panel.append('</ul>')
+                    in_list = False
+                panel.append(f'<div class="programme-outlook" role="group" aria-labelledby="progress-{slug}">')
+                in_progress = True
             if para['list'] and not in_list:
                 panel.append('<ul class="programme-list">')
                 in_list = True
@@ -95,10 +107,12 @@ def render(data):
                 in_list = False
             subheading = not para['list'] and para['style'] == 'Measure' and any(run['b'] for run in para['runs'])
             tag = 'li' if para['list'] else 'h3' if subheading else 'p'
-            extra = ' class="programme-progress"' if para['text'] == 'Fortschritt wird daran erkennbar, dass' else ''
+            extra = f' class="programme-progress" id="progress-{slug}"' if para['text'] == 'Fortschritt wird daran erkennbar, dass' else ''
             panel.append(f'<{tag} data-source-p="{para["index"]}"{extra}>{rich(para)}</{tag}>')
         if in_list:
             panel.append('</ul>')
+        assert in_progress, f'Missing progress criteria: {slug}'
+        panel.append('</div>')
         result.append(f'''<section class="programme-topic" id="{slug}">
   <h2 class="programme-heading"><button type="button" id="toggle-{slug}" data-topic-toggle aria-expanded="true" aria-controls="panel-{slug}" disabled><span data-source-p="{heading['index']}">{rich(heading)}</span><span class="topic-indicator" aria-hidden="true"></span></button></h2>
   <div class="programme-panel" id="panel-{slug}" aria-labelledby="toggle-{slug}">
@@ -107,7 +121,7 @@ def render(data):
     </div>
   </div>
 </section>''')
-    return (ROOT / 'template.html').read_text().replace('{{CHAPTERS}}', '\n'.join(result))
+    return (ROOT / 'template.html').read_text().replace('{{CHAPTERS}}', '\n'.join(result)).replace('{{TOPIC_LINKS}}', '\n'.join(links))
 
 
 def main():

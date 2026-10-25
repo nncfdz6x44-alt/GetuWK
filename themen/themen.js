@@ -4,6 +4,7 @@
   const tools = document.querySelector('.programme-tools');
   const header = document.querySelector('.site-header');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const topicLinks = [...document.querySelectorAll('[data-topic-link]')];
 
   function setOpen(topic, open, animate = true, preservePosition = false) {
     const button = topic.querySelector('[data-topic-toggle]');
@@ -13,6 +14,7 @@
     if (!open && panel.contains(document.activeElement)) button.focus({ preventScroll: true });
     button.setAttribute('aria-expanded', String(open));
     topic.toggleAttribute('data-open', open);
+    topicLinks.find(link => link.hash === `#${topic.id}`)?.toggleAttribute('data-open', open);
     panel.hidden = !open;
     panel.classList.toggle('is-opening', open && animate && !reducedMotion.matches);
     // Closing a long chapter keeps its control at the same visible position.
@@ -33,16 +35,21 @@
     document.documentElement.style.setProperty('--programme-header-offset', `${offset}px`);
   }
 
-  function openHash() {
+  function openHash(focus = false) {
     let slug;
     try { slug = decodeURIComponent(location.hash.slice(1)); } catch { return; }
     const topic = topics.find(item => item.id === slug);
     if (!topic) return;
     setOpen(topic, true, false);
+    topicLinks.forEach(link => {
+      if (link.hash === `#${slug}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
     // Only direct navigation scrolls. Ordinary accordion interactions never auto-scroll.
     requestAnimationFrame(() => {
       const offset = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--programme-header-offset')) || 112;
       window.scrollTo({ top: Math.max(0, topic.getBoundingClientRect().top + window.scrollY - offset - 8), behavior: 'instant' });
+      if (focus === true) topic.querySelector('[data-topic-toggle]').focus({ preventScroll: true });
     });
     announce();
   }
@@ -59,12 +66,19 @@
     });
   });
   tools.hidden = false;
+  topicLinks.forEach(link => link.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+    openHash(true);
+  }));
   tools.querySelector('[data-open-all]').addEventListener('click', () => { topics.forEach(topic => setOpen(topic, true, false)); announce(); });
   tools.querySelector('[data-close-all]').addEventListener('click', () => { topics.forEach(topic => setOpen(topic, false, false)); announce(); });
   headerOffset();
   if ('ResizeObserver' in window) new ResizeObserver(headerOffset).observe(header);
   window.addEventListener('resize', headerOffset);
-  window.addEventListener('hashchange', openHash);
-  window.addEventListener('pageshow', openHash);
+  window.addEventListener('hashchange', () => openHash());
+  window.addEventListener('popstate', () => openHash());
+  window.addEventListener('pageshow', () => openHash());
   openHash();
 })();

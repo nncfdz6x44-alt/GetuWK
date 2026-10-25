@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css?v=20261012-03" />
-  <link rel="stylesheet" href="./themen.css?v=20261025-04" />
+  <link rel="stylesheet" href="./themen.css?v=20261025-05" />
   <script src="../script.js?v=20261012-02" defer></script>
-  <script src="./themen.js?v=20261025-03" defer></script>
+  <script src="./themen.js?v=20261025-05" defer></script>
 </head>
 <body class="programme-page">
   <a class="programme-skip" href="#wahlprogramm">Zum Wahlprogramm</a>
@@ -36,14 +36,24 @@
       <div class="programme-intro">
         <p class="eyebrow">Oberbürgermeisterwahl 2027</p>
         <h1>Wahlprogramm</h1>
+        <div class="programme-intro-layout">
+          <p class="programme-invitation">Ich möchte Leipzig mit Ihnen gemeinsam voranbringen. In diesen 13 Themen finden Sie meine Vorhaben für unsere Stadt und die Kriterien, an denen Fortschritt erkennbar werden soll. Entdecken Sie die Themen, die Sie bewegen.</p>
+          <a class="programme-pdf" href="https://drive.google.com/drive/folders/1VnPWiy6QRjdI9GCBzM7H0LSahE7gWOVV?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Wahlprogramm als PDF – im Google-Drive-Ordner öffnen (neuer Tab)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M12 11v6m-3-3 3 3 3-3"/></svg>
+            <span><strong>Wahlprogramm als PDF</strong><span>Im Google-Drive-Ordner öffnen<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 12 12 4M4 4h8v8"/></svg></span></span>
+          </a>
+        </div>
+      </div>
+      <nav class="programme-overview" aria-labelledby="programme-overview-title">
         <div class="programme-toolbar">
-          <p class="programme-count">13 Themen</p>
+          <h2 class="programme-count" id="programme-overview-title">13 Themen</h2>
           <div class="programme-tools" aria-label="Alle Themen steuern" hidden>
             <button type="button" data-open-all>Alle öffnen</button>
             <button type="button" data-close-all>Alle schließen</button>
           </div>
         </div>
-      </div>
+        <ol class="programme-topic-links">{{TOPIC_LINKS}}</ol>
+      </nav>
       <div class="programme-accordion">{{CHAPTERS}}</div>
       <p class="programme-status" role="status" aria-live="polite"></p>
     </main>
