@@ -26,6 +26,13 @@
     },{rootMargin:'-18% 0px -55% 0px',threshold:0});
     document.querySelectorAll('.story-chapter').forEach(s=>observer.observe(s));
   }
-  addEventListener('hashchange',()=>mark(location.hash.slice(1)));
-  if(location.hash)mark(location.hash.slice(1));
+  function alignDirectLink(){
+    const target=document.getElementById(location.hash.slice(1));
+    if(!target?.classList.contains('story-chapter'))return;
+    target.scrollIntoView({block:'start',behavior:'instant'});
+    target.querySelector('h2')?.focus({preventScroll:true});
+    mark(target.id);
+  }
+  addEventListener('hashchange',alignDirectLink);
+  if(location.hash)(document.fonts?.ready||Promise.resolve()).then(alignDirectLink);
 })();
