@@ -1552,3 +1552,39 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .menu-toggle path { transition: none; }
 }
+
+/* Research publications link in the homepage profile section. */
+.homepage .publications-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-top: 2.5rem;
+  padding-block: 2rem;
+  border-block: 1px solid var(--line);
+}
+
+.homepage .publications-note h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.35rem, 2vw, 1.55rem);
+  line-height: 1.3;
+}
+
+.homepage .publications-note p {
+  max-width: 46ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.homepage .publications-note .button {
+  justify-self: start;
+  max-width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 980px) {
+  .homepage .publications-note {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
