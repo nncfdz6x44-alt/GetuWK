@@ -33,7 +33,7 @@
 .chapter-heading{display:flex;gap:1.2rem;align-items:baseline;margin:0 0 2rem}
 .chapter-number{color:var(--accent-dark);font-size:.75rem;font-variant-numeric:tabular-nums;letter-spacing:.06em}
 .chapter-heading h2{font-family:Fraunces,Georgia,serif;font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.16;letter-spacing:-.025em;margin:0;max-width:100%;overflow-wrap:anywhere;hyphens:auto}
-.chapter-heading h2:focus{outline:none}
+.chapter-heading h2:focus-visible{outline:2px solid var(--accent-dark);outline-offset:8px;border-radius:3px}
 .story-prose{max-width:65ch;font-size:1.08rem;line-height:1.92;overflow-wrap:anywhere;hyphens:auto}
 .story-prose p{margin:0 0 1.35em}
 .story-prose p:last-child{margin-bottom:0}
@@ -56,3 +56,4 @@
 @media(min-width:761px){.chapter-menu:not([open])>*:not(summary){display:block}.chapter-menu:not([open]) ol{display:grid}}
 @media(max-width:760px){.personal-main{padding-top:2.2rem}.personal-hero{grid-template-columns:1fr;gap:2rem;padding-bottom:2.5rem}.personal-title{font-size:clamp(2.5rem,9vw,3.6rem);max-width:15ch}.personal-intro{max-width:none}.personal-portrait{max-width:520px;width:100%;justify-self:center}.personal-portrait img{aspect-ratio:4/5}.personal-story-layout{display:block;padding-top:1.7rem}.story-sidebar{position:static;margin-bottom:2.5rem}.chapter-menu{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.chapter-menu summary{padding:1rem 2rem 1rem 0;cursor:pointer;pointer-events:auto;position:relative}.chapter-menu summary::after{content:'+';position:absolute;right:.2rem;font-size:1.4rem;top:.65rem;color:var(--accent-dark)}.chapter-menu[open] summary::after{content:'−'}.editorial-label{margin-top:0}.chapter-menu ol{padding-bottom:1rem;gap:0}.chapter-menu a{min-height:44px;padding:.7rem 0;border:0}.story-chapter{scroll-margin-top:7rem;padding-bottom:2.8rem;margin-bottom:2.8rem}.chapter-heading{gap:.8rem;margin-bottom:1.5rem}.story-prose{font-size:1.05rem;line-height:1.85;max-width:none}.personal-next{grid-template-columns:1fr;gap:1.5rem;margin-top:3rem}.story-photo img{border-radius:16px}}
 @media(prefers-reduced-motion:reduce){.personal-page{scroll-behavior:auto}.personal-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media(max-width:760px){.personal-opening{display:contents}.personal-hero .eyebrow{grid-row:1;margin:0}.personal-title{grid-row:2;margin:0}.personal-portrait{grid-row:3}.personal-intro{grid-row:4}.story-start{grid-row:5;margin:0;justify-self:start}.personal-hero{gap:1.5rem}}
