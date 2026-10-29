@@ -1553,18 +1553,22 @@ h2 {
   .menu-toggle path { transition: none; }
 }
 
-/* Campaign signature notice: part of the page flow, below the sticky header. */
+/* Campaign signature notice: first visible page content, above the navigation. */
 .signature-banner {
+  margin: 0;
+  padding: clamp(1rem, 2vw, 1.4rem) 0;
+  background: var(--action);
+  color: var(--surface-strong);
+  overflow-wrap: anywhere;
+}
+
+.signature-banner__inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 1rem 2rem;
-  margin-top: 1rem;
-  padding: clamp(1rem, 2vw, 1.4rem) clamp(1rem, 2.5vw, 1.75rem);
-  border-radius: 18px;
-  background: var(--action);
-  color: var(--surface-strong);
-  overflow-wrap: anywhere;
+  width: min(1180px, calc(100% - 3rem));
+  margin-inline: auto;
 }
 
 .signature-banner__copy {
@@ -1610,9 +1614,10 @@ h2 {
 }
 
 @media (max-width: 720px) {
-  .signature-banner {
+  .signature-banner__inner {
     grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
+    width: calc(100% - 2.5rem);
   }
 
   .signature-banner .signature-banner__title {
