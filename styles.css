@@ -1564,6 +1564,7 @@ h2 {
   border-radius: 18px;
   background: var(--action);
   color: var(--surface-strong);
+  overflow-wrap: anywhere;
 }
 
 .signature-banner__copy {
@@ -1588,6 +1589,8 @@ h2 {
 
 .signature-banner .signature-banner__action {
   gap: 0.6rem;
+  min-width: 0;
+  max-width: 100%;
   min-height: 3rem;
   padding: 0.75rem 1.2rem;
   background: var(--surface-strong);
@@ -1617,7 +1620,9 @@ h2 {
   }
 
   .signature-banner .signature-banner__action {
+    display: block;
     justify-self: stretch;
+    padding-inline: 0.9rem;
   }
 }
 
