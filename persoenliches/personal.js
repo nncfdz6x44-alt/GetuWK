@@ -1,4 +1,6 @@
 (() => {
+  // Explicitly authorized preview-only text enlargement check; no browser preferences or local files.
+  if(new URLSearchParams(location.search).get('text-scale')==='200')document.documentElement.style.fontSize='200%';
   const menu = document.querySelector('.chapter-menu');
   const mobile = matchMedia('(max-width:760px)');
   const links = [...document.querySelectorAll('[data-chapter-link]')];
