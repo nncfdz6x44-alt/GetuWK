@@ -41,6 +41,8 @@
 .story-prose .story-pause{font-family:Fraunces,Georgia,serif;font-size:clamp(2rem,4vw,3.25rem);line-height:1.2;color:var(--accent-dark);margin:2.25rem 0}
 .story-prose .story-ending{font-family:Fraunces,Georgia,serif;font-size:clamp(1.4rem,2.3vw,1.8rem);line-height:1.6;color:var(--ink);padding-left:1.25rem;border-left:2px solid var(--accent);margin-top:2rem}
 .photo-wide{margin-top:2.5rem;max-width:100%}
+.photo-archive{margin-top:2.5rem;max-width:520px}
+.photo-documentary{margin-top:2.5rem;max-width:600px}
 .photo-closing{margin-top:3rem;max-width:540px}
 .photo-closing img{aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
 .story-placeholder{margin:2.5rem 0 0;padding:clamp(1.5rem,4vw,3rem);min-height:210px;border:1px dashed #c5bfb4;border-radius:16px;background:#faf6ef;display:flex;align-items:center}
