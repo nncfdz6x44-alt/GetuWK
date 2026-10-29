@@ -3,7 +3,7 @@
   const mobile = matchMedia('(max-width:760px)');
   const links = [...document.querySelectorAll('[data-chapter-link]')];
   const summary=menu.querySelector('summary');
-  function syncMenu(){ menu.open = !mobile.matches;summary.tabIndex=mobile.matches?0:-1;summary.toggleAttribute('aria-disabled',!mobile.matches); }
+  function syncMenu(){ menu.open = !mobile.matches;summary.tabIndex=mobile.matches?0:-1;summary.setAttribute('aria-disabled',String(!mobile.matches)); }
   summary.addEventListener('click',e=>{if(!mobile.matches)e.preventDefault();});
   syncMenu();
   mobile.addEventListener('change',syncMenu);

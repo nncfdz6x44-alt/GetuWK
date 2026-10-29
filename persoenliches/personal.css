@@ -1,3 +1,4 @@
+.personal-document{scroll-behavior:auto}
 .personal-page{background:var(--bg);color:var(--ink)}
 .personal-page::before{display:none}
 .personal-page .page-shell{padding-bottom:2rem}
