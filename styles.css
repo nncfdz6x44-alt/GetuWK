@@ -1552,3 +1552,78 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .menu-toggle path { transition: none; }
 }
+
+/* Campaign signature notice: part of the page flow, below the sticky header. */
+.signature-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-top: 1rem;
+  padding: clamp(1rem, 2vw, 1.4rem) clamp(1rem, 2.5vw, 1.75rem);
+  border-radius: 18px;
+  background: var(--action);
+  color: var(--surface-strong);
+}
+
+.signature-banner__copy {
+  min-width: 0;
+}
+
+.signature-banner .signature-banner__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.signature-banner .signature-banner__text {
+  max-width: 72ch;
+  margin: 0.35rem 0 0;
+  color: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.signature-banner .signature-banner__action {
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.2rem;
+  background: var(--surface-strong);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.signature-banner .signature-banner__action:hover,
+.signature-banner .signature-banner__action:focus-visible {
+  background: #fff;
+  color: var(--ink);
+}
+
+.signature-banner .signature-banner__action:focus-visible {
+  outline-color: var(--surface-strong);
+  outline-offset: 4px;
+}
+
+@media (max-width: 720px) {
+  .signature-banner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .signature-banner .signature-banner__title {
+    font-size: 1.05rem;
+  }
+
+  .signature-banner .signature-banner__action {
+    justify-self: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signature-banner .signature-banner__action {
+    transition: none;
+    transform: none;
+  }
+}
