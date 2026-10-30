@@ -1557,7 +1557,7 @@ h2 {
 .signature-banner {
   margin: 0;
   padding: clamp(1rem, 2vw, 1.4rem) 0;
-  background: var(--action);
+  background: #1d4ed8;
   color: var(--surface-strong);
   overflow-wrap: anywhere;
 }
