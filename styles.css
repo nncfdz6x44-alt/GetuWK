@@ -1637,3 +1637,22 @@ h2 {
     transform: none;
   }
 }
+
+.profile-memberships {
+  margin: 1.35rem 0 0;
+  line-height: 1.6;
+}
+
+.profile-memberships a {
+  display: inline-block;
+  padding: .5rem 0;
+  color: var(--accent-dark);
+  font-weight: 700;
+  text-underline-offset: .2em;
+  overflow-wrap: anywhere;
+}
+
+.profile-memberships a:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 4px;
+}

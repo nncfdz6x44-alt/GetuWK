@@ -66,3 +66,74 @@
 @media(max-width:760px){.story-sidebar{max-height:none;overflow:visible}}
 @container (max-width:16em){.personal-page .site-header[data-menu-ready]{grid-template-columns:minmax(0,1fr) auto;gap:.5rem}.personal-page .site-header[data-menu-ready] .brand{grid-column:1/-1;grid-row:1;overflow-wrap:anywhere}.personal-page .site-header[data-menu-ready]>.button-small{grid-column:1;grid-row:2;justify-self:start;max-width:100%}.personal-page .site-header[data-menu-ready] .menu-toggle{grid-column:2;grid-row:2}.personal-page .site-header[data-menu-ready] .site-nav a{overflow-wrap:anywhere;hyphens:auto;min-width:0}}
 @container (max-width:10em){.personal-page .site-header[data-menu-ready]{grid-template-columns:minmax(0,1fr)}.personal-page .site-header[data-menu-ready] .brand{grid-column:1;grid-row:1}.personal-page .site-header[data-menu-ready]>.button-small{grid-column:1;grid-row:2}.personal-page .site-header[data-menu-ready] .menu-toggle{grid-column:1;grid-row:3;justify-self:end}}
+
+.personal-memberships {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.personal-memberships .chapter-heading {
+  margin-bottom: 1rem;
+}
+
+.membership-intro {
+  max-width: 62ch;
+  margin: 0 0 2.25rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem clamp(1.5rem, 4vw, 3rem);
+}
+
+.membership-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.membership-group h3 {
+  margin: 0 0 .65rem;
+  color: var(--accent-dark);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.membership-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.membership-group li {
+  padding: .65rem 0;
+  border-top: 1px solid var(--line);
+  line-height: 1.5;
+}
+
+.membership-group a {
+  text-decoration: underline;
+  text-decoration-color: var(--muted);
+  text-underline-offset: .19em;
+}
+
+.membership-group a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: currentColor;
+}
+
+.membership-note {
+  display: block;
+  margin-top: .2rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+@container (max-width: 49rem) {
+  .membership-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
