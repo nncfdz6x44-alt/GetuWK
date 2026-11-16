@@ -1656,3 +1656,131 @@ h2 {
   outline: 2px solid var(--accent-dark);
   outline-offset: 4px;
 }
+
+.membership-ticker {
+  margin-top: clamp(1.75rem, 4vw, 3rem);
+}
+
+.membership-ticker-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 1rem;
+  margin-bottom: .4rem;
+}
+
+.membership-ticker-heading h3 {
+  margin: 0;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+}
+
+.membership-ticker-toggle {
+  min-height: 44px;
+  min-width: 6.5rem;
+  padding: .3rem .6rem;
+  border: 0;
+  background: transparent;
+  color: var(--accent-dark);
+  font: inherit;
+  font-size: .9rem;
+  text-align: right;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  cursor: pointer;
+}
+
+.membership-ticker-toggle:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+.membership-ticker-names {
+  border-block: 1px solid var(--line);
+}
+
+.membership-ticker-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  row-gap: .55rem;
+  margin: 0;
+  padding: .95rem 0;
+  list-style: none;
+}
+
+.membership-ticker-list[data-ticker-copy] {
+  display: none;
+}
+
+.membership-ticker-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ink);
+  font-size: clamp(1rem, 1.6vw, 1.23rem);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.membership-ticker-list li:not(:last-child)::after {
+  content: "";
+  flex: 0 0 .32rem;
+  height: .32rem;
+  border-radius: 50%;
+  background: var(--accent-dark);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .membership-ticker[data-ticker-ready] .membership-ticker-names {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .membership-ticker[data-ticker-ready] .membership-ticker-list {
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    min-width: 100%;
+    column-gap: clamp(1.25rem, 4vw, 3.5rem);
+    padding-inline: clamp(.75rem, 2vw, 1.5rem);
+    animation: membership-ticker-scroll 46s linear infinite;
+  }
+
+  .membership-ticker[data-ticker-ready] .membership-ticker-list li {
+    white-space: nowrap;
+  }
+
+  .membership-ticker[data-ticker-ready] .membership-ticker-list li::after {
+    content: "";
+    flex: 0 0 .32rem;
+    height: .32rem;
+    border-radius: 50%;
+    background: var(--accent-dark);
+  }
+
+  .membership-ticker[data-ticker-paused] .membership-ticker-list {
+    animation-play-state: paused;
+  }
+}
+
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) {
+  .membership-ticker[data-ticker-ready] .membership-ticker-list {
+    animation-duration: 30s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membership-ticker-toggle {
+    display: none;
+  }
+}
+
+@keyframes membership-ticker-scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
