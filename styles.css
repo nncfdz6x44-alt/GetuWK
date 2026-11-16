@@ -1751,21 +1751,28 @@ h2 {
     display: flex;
     flex: 0 0 auto;
     flex-wrap: nowrap;
-    justify-content: space-around;
     min-width: 100%;
-    column-gap: clamp(1.25rem, 4vw, 3.5rem);
-    padding-inline: clamp(.75rem, 2vw, 1.5rem);
+    column-gap: 0;
     animation: membership-ticker-scroll 46s linear infinite;
   }
 
   .membership-ticker[data-ticker-ready] .membership-ticker-list li {
+    /* Equal spacing on both sides places the dot at the boundary between names. */
+    position: relative;
+    flex: 1 0 auto;
+    justify-content: center;
+    padding-inline: clamp(.625rem, 2vw, 1.75rem);
     white-space: nowrap;
   }
 
   .membership-ticker[data-ticker-ready] .membership-ticker-list li::after {
     content: "";
-    flex: 0 0 .32rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: .32rem;
     height: .32rem;
+    transform: translate(50%, -50%);
     border-radius: 50%;
     background: var(--accent-dark);
   }
