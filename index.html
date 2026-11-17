@@ -16,7 +16,7 @@
     />
     <link rel="preconnect" href="https://sibforms.com" />
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css" />
-    <link rel="stylesheet" href="./styles.css?v=20261030-01" />
+    <link rel="stylesheet" href="./styles.css?v=membership-ticker-3" />
   </head>
   <body class="homepage">
     <aside class="signature-banner" aria-labelledby="signature-banner-title">
@@ -129,6 +129,25 @@
               </p>
             </article>
           </div>
+          <section class="membership-ticker" id="mitgliedschaften-auswahl" aria-labelledby="membership-ticker-title" data-membership-ticker>
+            <div class="membership-ticker-heading">
+              <h3 id="membership-ticker-title">Mitglied in:</h3>
+              <button class="membership-ticker-toggle" type="button" aria-label="Laufband pausieren" aria-controls="membership-ticker-names" hidden>Pause</button>
+            </div>
+            <div class="membership-ticker-names" id="membership-ticker-names" role="group" aria-labelledby="membership-ticker-title">
+              <ul class="membership-ticker-list" role="list">
+                <li>SC DHfK Leipzig e.V.</li>
+                <li>Rotary Club Leipzig-International</li>
+                <li>Straßenkindergarten e.V.</li>
+              </ul>
+              <ul class="membership-ticker-list" aria-hidden="true" data-ticker-copy>
+                <li>SC DHfK Leipzig e.V.</li>
+                <li>Rotary Club Leipzig-International</li>
+                <li>Straßenkindergarten e.V.</li>
+              </ul>
+            </div>
+          </section>
+          <p class="profile-memberships"><a href="/persoenliches/#mitgliedschaften">Persönliches &amp; Mitgliedschaften <span class="profile-memberships-action">entdecken <span aria-hidden="true">→</span></span></a></p>
         </section>
 
         <section class="issues" id="themen">
@@ -369,7 +388,7 @@
     </script>
     <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
     <script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js"></script>
-    <script src="./script.js?v=20261012-02"></script>
+    <script src="./script.js?v=membership-ticker-1"></script>
   </body>
 </html>
 

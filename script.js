@@ -105,3 +105,16 @@ if (siteHeader && menuToggle && siteNavigation) {
     setMenuOpen(false);
   });
 }
+
+const membershipTicker = document.querySelector("[data-membership-ticker]");
+const membershipTickerToggle = membershipTicker?.querySelector(".membership-ticker-toggle");
+
+if (membershipTickerToggle) {
+  membershipTickerToggle.addEventListener("click", () => {
+    const paused = membershipTicker.toggleAttribute("data-ticker-paused");
+    membershipTickerToggle.textContent = paused ? "Fortsetzen" : "Pause";
+    membershipTickerToggle.setAttribute("aria-label", paused ? "Laufband fortsetzen" : "Laufband pausieren");
+  });
+  membershipTicker.setAttribute("data-ticker-ready", "");
+  membershipTickerToggle.hidden = false;
+}
